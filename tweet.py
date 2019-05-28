@@ -1,7 +1,6 @@
 import random as r 
 from unicode_codes import EMOJI_LIST as emoji_list
 
-
 def get_rand_emoji():
     
     rand_emoji = "   "
