@@ -1,6 +1,7 @@
 import random as r 
 from unicode_codes import EMOJI_LIST as emoji_list
 
+
 def get_rand_emoji():
     
     rand_emoji = "   "
@@ -55,11 +56,11 @@ def get_tweet():
     tweet_str = emoji_str + happy_face.replace("0", emoji1_str).replace("1", emoji2_str)
     
     while len(tweet_str.strip()) > 280: 
-        tweet_str = get_tweet_str() 
+        tweet_str = get_tweet() 
     
     
     return tweet_str.strip()
     
 
 if __name__ == "__main__": 
-    get_tweet_str()
+    get_tweet()

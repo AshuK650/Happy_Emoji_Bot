@@ -2,6 +2,8 @@
 
 """
 Data literal storing emoji names and unicode codes
+Pulled from emoji 0.5.2 Python Library 
+    Library URL: https://pypi.org/project/emoji/
 """
 
 EMOJI_UNICODE = {
