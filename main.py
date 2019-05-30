@@ -4,7 +4,6 @@ import credentials as c
 import tweet
 
 
-
 #interval_int = 60 * 60 * 4  # 4 hours
 interval_int = 60 * 15  # 15 minutes 
 
