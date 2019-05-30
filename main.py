@@ -1,4 +1,5 @@
 import time as t 
+from credentials import get_credentials
 #import tweepy 
 from tweet import get_tweet
 
