@@ -19,7 +19,7 @@ interval_int = 60 * 15  # 15 minutes
 while True: 
     tweet_str = tweet.get_tweet() 
     
-    print(tweet_str)    
+    print(tweet_str) # replace this line with tweepy's update status function    
     
     t.sleep(interval_int) 
 
