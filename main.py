@@ -1,25 +1,26 @@
 import time as t 
-from credentials import get_credentials
+import credentials
 #import tweepy 
-from tweet import get_tweet
+import tweet
+
 
 
 #interval_int = 60 * 60 * 4  # 4 hours
-
 interval_int = 60 * 15  # 15 minutes 
 
+credentials = credentials.get_credentials() 
+
+
 # Twitter authentication set up goes here 
-
-#auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-#auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
+#auth = tweetpy.OAuthHandler(credentials["CONSUMER_KEY"], credentials["CONSUMER_SECRET"])
+#auth.set_access_token(credentials["ACCESS_KEY"], credentials["ACCESS_SECRET"])
 #api = tweepy.API(auth)
-
 
 # loop to tweet ever 4 hours 
 while True: 
-    tweet_str = get_tweet() 
+    tweet_str = tweet.get_tweet() 
     
-    print(tweet_str)
-    # .set_status() or whatever from twitter api 
+    print(tweet_str)    
     
     t.sleep(interval_int) 
+

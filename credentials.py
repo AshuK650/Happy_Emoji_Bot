@@ -11,7 +11,6 @@ def get_credentials():
     
     return credentials_dict
     
-    pass
 
 if __name__ == "__main__": 
     get_credentials() 
