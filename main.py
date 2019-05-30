@@ -6,8 +6,9 @@ import tweet
 
 credentials = c.get_credentials()
 
+
 #interval_int = 60 * 60 * 4  # 4 hours
-interval_int = 60 * 15  # 15 minutes  
+interval_int = 60 * 15 
 
 # Twitter authentication set up goes here 
 
@@ -20,6 +21,7 @@ while True:
     tweet_str = tweet.get_tweet() 
     
     print(tweet_str) # replace this line with tweepy's update status function    
+    print(len(tweet_str))
     
     t.sleep(interval_int) 
 
