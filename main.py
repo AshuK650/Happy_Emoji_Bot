@@ -24,7 +24,8 @@ while True:
         try: 
             tweet_str = tweet.get_tweet() 
             api.update_status(tweet_str)
-            
+            print(tweet_str)
+            print(len(tweet_str))
             t.sleep(60)
             
         except TweepError: 
