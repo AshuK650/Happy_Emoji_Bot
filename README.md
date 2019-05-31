@@ -1,1 +1,1 @@
-# Happy Emoji Bot
+# Random Happy Face Bot
