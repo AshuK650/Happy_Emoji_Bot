@@ -1,5 +1,6 @@
 import credentials as c
 import datetime as dt 
+import time as t 
 import tweepy 
 import tweet
 
@@ -18,9 +19,17 @@ while True:
     
     now_obj = dt.datetime.now() 
     
-    if now_obj.hour % 6 == 0 and now_obj.hour != 0:  # tweet ever 4 hours 
+    if now_obj.hour % 4 == 0 and now_obj.minute == 0:  # tweet ever 4 hours 
         
-        tweet_str = tweet.get_tweet() 
-        
-        api.update_status(tweet_str)
+        try: 
+            tweet_str = tweet.get_tweet() 
+            api.update_status(tweet_str)
+            
+            t.sleep(60)
+            
+        except TweepError: 
+            api.update_status("Check Again Next Time \U0001f600")
+            t.sleep(60)
+            
+            pass
         
