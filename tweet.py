@@ -51,6 +51,8 @@ def get_tweet():
                 1111 
     """
     
+ 
+             
     
     tweet_str = emoji_str + happy_face.replace("0", emoji1_str).replace("1", emoji2_str)
     
@@ -58,7 +60,7 @@ def get_tweet():
         tweet_str = get_tweet() 
     
     
-    return tweet_str.strip()
+    return tweet_str.strip() 
     
 
 if __name__ == "__main__": 
