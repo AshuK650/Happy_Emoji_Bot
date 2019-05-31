@@ -20,7 +20,7 @@ while True:
         print(tweet_str)
         print(len(tweet_str))
     except TweepError: 
-        api.update_status("Sorry! Check again tomorrow \U0001f600")
-        print("Sorry! Check again tomorrow \U0001f600")
+        api.update_status("Sorry! Check again later \U0001f600")
+        print("Sorry! Check again later \U0001f600")
         
     t.sleep(interval_int) 
