@@ -16,7 +16,11 @@ while True:
         tweet_str = tweet.get_tweet() 
         api.update_status(tweet_str)
         
+        # used for the bash console in pythonanywhere
+        print(tweet_str)
+        print(len(tweet_str))
     except TweepError: 
         api.update_status("Sorry! Check again tomorrow \U0001f600")
+        print("Sorry! Check again tomorrow \U0001f600")
         
     t.sleep(interval_int) 
