@@ -21,8 +21,8 @@ while True:
         print(len(tweet_str))
         
     except: 
-        api.update_status("Sorry! Check again later \U0001f600")
-        print("Sorry! Check again later \U0001f600")
+        api.update_status("Sorry! Check again later :) ")
+        print("Sorry! Check again later :) ")
         
         
     t.sleep(interval_int) 
