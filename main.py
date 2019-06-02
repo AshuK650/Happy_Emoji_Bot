@@ -1,6 +1,5 @@
 import credentials as c 
 import time as t 
-import datetime as dt 
 import tweepy 
 import tweet
 
@@ -13,12 +12,6 @@ api = tweepy.API(auth)
 
 while True: 
     
-    now_obj = dt.datetime.now() 
-    
-    hour_int = now_obj.hour + 4
-    min_int = now_obj.minute
-    sec_int = now_obj.second
-    
     try: 
         tweet_str = tweet.get_tweet() 
         api.update_status(tweet_str)
@@ -27,17 +20,9 @@ while True:
         print(tweet_str)
         print(len(tweet_str))
         
-        if hour_int >= 12: 
-            print("Next tweet at: {}:{}:{} PM".format(hour_int - 12, min_int, sec_int))
-        else: 
-            print("Next tweet at: {}:{}:{} PM".format(hour_int, min_int, sec_int))
     except: 
         api.update_status("Sorry! Check again later \U0001f600")
         print("Sorry! Check again later \U0001f600")
         
-        if hour_int >= 12: 
-            print("Next tweet at: {}:{}:{} PM".format(hour_int - 12, min_int, sec_int))
-        else: 
-            print("Next tweet at: {}:{}:{} PM".format(hour_int, min_int, sec_int))
         
     t.sleep(interval_int) 
