@@ -4,7 +4,7 @@ import tweepy
 import tweet
 
 credentials = c.get_credentials()
-interval_int = 60 * 60 * 4 
+interval_int = 60 * 60 * 3 
 
 auth = tweepy.OAuthHandler(credentials["CONSUMER_KEY"], credentials["CONSUMER_SECRET"])
 auth.set_access_token(credentials["ACCESS_KEY"], credentials["ACCESS_SECRET"])
@@ -19,10 +19,13 @@ while True:
         # used for the bash console in pythonanywhere
         print(tweet_str)
         print(len(tweet_str))
+
+    except TweepError: 
+        rand_emoji_tuple = tweet.get_rand_emoji() 
+        rand_emoji = rand_emoji_tuple[1]
         
-    except: 
-        api.update_status("Sorry! Check again later :) ")
-        print("Sorry! Check again later :) ")
-        
+        tweet_str = "Sorry check again later {}".format(rand_emoji) 
+        api.update_status(tweet_str) 
+    
         
     t.sleep(interval_int) 
