@@ -20,7 +20,7 @@ while True:
         print(tweet_str)
         print(len(tweet_str))
 
-    except TweepError: 
+    except tweepy.TweepError: 
         rand_emoji_tuple = tweet.get_rand_emoji() 
         rand_emoji = rand_emoji_tuple[1]
         
