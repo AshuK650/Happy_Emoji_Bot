@@ -1,4 +1,4 @@
-import credentials as c 
+#import credentials as c 
 import time as t 
 import tweepy 
 import tweet
@@ -9,7 +9,7 @@ CONSUMER_SECRET = environ['CONSUMER_SECRET']
 ACCESS_KEY = environ['ACCESS_KEY']
 ACCESS_SECRET = environ['ACCESS_SECRET']
 
-credentials = c.get_credentials()
+#credentials = c.get_credentials()
 interval_int = 60 * 60 * 3 
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
