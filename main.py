@@ -16,16 +16,19 @@ while True:
         tweet_str = tweet.get_tweet() 
         api.update_status(tweet_str)
         
-        # used for the bash console in pythonanywhere
+        # used for the bash console
         print(tweet_str)
         print(len(tweet_str))
 
     except tweepy.TweepError: 
         rand_emoji_tuple = tweet.get_rand_emoji() 
-        rand_emoji = rand_emoji_tuple[1]
+        rand_emoji = rand_emoji_tuple[1].encode("utf-8", "ignore").decode("utf-8", "ignore")
         
         tweet_str = "Sorry check again later {}".format(rand_emoji) 
         api.update_status(tweet_str) 
+        
+        # used for the bash console 
+        print(tweet_str)
     
         
     t.sleep(interval_int) 
