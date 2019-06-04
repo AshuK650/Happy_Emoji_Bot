@@ -22,13 +22,17 @@ while True:
 
     except tweepy.TweepError: 
         rand_emoji_tuple = tweet.get_rand_emoji() 
-        rand_emoji = rand_emoji_tuple[1].encode("utf-8", "ignore").decode("utf-8", "ignore")
+        rand_emoji = rand_emoji_tuple[1]
         
-        tweet_str = "Sorry check again later {}".format(rand_emoji) 
+        tweet_str = "Sorry check again later {}".format(rand_emoji.encode("utf-8", "ignore").decode("utf-8", "ignore"))
         api.update_status(tweet_str) 
         
         # used for the bash console 
         print(tweet_str)
-    
+        
+    except UnicodeEncodeError: 
+        pass
         
     t.sleep(interval_int) 
+
+
