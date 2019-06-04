@@ -30,9 +30,5 @@ while True:
         # used for the bash console 
         print(tweet_str)
         
-    except UnicodeEncodeError: 
-        pass
         
     t.sleep(interval_int) 
-
-
