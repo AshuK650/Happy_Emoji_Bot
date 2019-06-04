@@ -32,8 +32,8 @@ def get_tweet():
     name1_str = emoji_tuples[0][0].strip(":").replace("_", " ").title() 
     name2_str = emoji_tuples[1][0].strip(":").replace("_", " ").title() 
     
-    emoji1_str = emoji_tuples[0][1]
-    emoji2_str = emoji_tuples[1][1]
+    emoji1_str = emoji_tuples[0][1].encode("utf-8", "ignore").decode("utf-8", "ignore")
+    emoji2_str = emoji_tuples[1][1].encode("utf-8", "ignore").decode("utf-8", "ignore")
     
     emoji_str = "{} and {}".format(name1_str, name2_str)
     
@@ -58,7 +58,6 @@ def get_tweet():
     
     while len(tweet_str.strip()) > 280: 
         tweet_str = get_tweet() 
-    
     
     return tweet_str.strip() 
     
