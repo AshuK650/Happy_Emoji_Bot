@@ -24,7 +24,7 @@ while True:
         
         print(tweet_str)
         print(len(tweet_str))
-        print("Next tweet in: {} hours, {} minutes, and {} seconds.".format(rand_hour, rand_min, rand_sec))
+        print("Next tweet in: {} hours, {} minutes, and {} seconds.".format(rand_hour, rand_min, rand_sec))       
                 
     except (Exception, tweepy.TweepError): 
         print("Exception Occured. Just wait for the next tweet ")
