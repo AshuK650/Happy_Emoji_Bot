@@ -20,10 +20,10 @@ while True:
     
     try: 
         tweet_str = tweet.get_tweet() 
-#        api.update_status(tweet_str)
+        api.update_status(tweet_str)
         
-#        print(tweet_str)
-#        print(len(tweet_str))
+        print(tweet_str)
+        print(len(tweet_str))
         print("Next tweet in: {} hours, {} minutes, and {} seconds.".format(rand_hour, rand_min, rand_sec))
                 
     except (Exception, tweepy.TweepError): 
