@@ -12,18 +12,18 @@ api = tweepy.API(auth)
 
 while True: 
     
-    rand_hour = r.randint(1,4)
-    rand_min = r.randint(1,60)
-    rand_sec = r.randint(1,60)
+    rand_hour = r.randint(1,4) 
+    rand_min = r.randint(1,60) 
+    rand_sec = r.randint(1,60) 
     
-    interval_int = rand_sec * rand_min * rand_hour 
+    interval_int = (rand_hour * 60 * 60)  + (rand_min * 60) + rand_sec
     
     try: 
         tweet_str = tweet.get_tweet() 
-        api.update_status(tweet_str)
+#        api.update_status(tweet_str)
         
-        print(tweet_str)
-        print(len(tweet_str))
+#        print(tweet_str)
+#        print(len(tweet_str))
         print("Next tweet in: {} hours, {} minutes, and {} seconds.".format(rand_hour, rand_min, rand_sec))
                 
     except (Exception, tweepy.TweepError): 
