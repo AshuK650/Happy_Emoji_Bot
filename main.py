@@ -16,7 +16,7 @@ while True:
     
     try: 
         tweet_str = tweet.get_tweet() 
-#        api.update_status(tweet_str)
+        api.update_status(tweet_str)
         
         print(tweet_str)
         print(str(len(tweet_str)) + "\n")
