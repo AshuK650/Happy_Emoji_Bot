@@ -1,5 +1,5 @@
-import time as t, random as r  
-import credentials, tweepy, tweet 
+import credentials, tweepy, tweet, time, random 
+
 
 c = credentials.get_credentials()
 
@@ -8,9 +8,9 @@ auth.set_access_token(c["ACCESS_KEY"], c["ACCESS_SECRET"])
 api = tweepy.API(auth)
 
 while True:
-    rand_hour = r.randint(0,4) 
-    rand_min = r.randint(0,60) 
-    rand_sec = r.randint(0,60) 
+    rand_hour = random.randint(0,4) 
+    rand_min = random.randint(0,60) 
+    rand_sec = random.randint(0,60) 
     
     interval_int = (rand_hour * 3600)  + (rand_min * 60) + rand_sec
     
@@ -26,4 +26,4 @@ while True:
         print("Exception Occured. Just wait for the next tweet ")
         print("Next tweet in: {} hours, {} minutes, and {} seconds".format(rand_hour, rand_min, rand_sec))
     
-    t.sleep(interval_int) 
+    time.sleep(interval_int) 
