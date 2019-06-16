@@ -6,8 +6,6 @@ auth = tweepy.OAuthHandler(c["CONSUMER_KEY"], c["CONSUMER_SECRET"])
 auth.set_access_token(c["ACCESS_KEY"], c["ACCESS_SECRET"])
 api = tweepy.API(auth)
 
-count = 0 
-
 try: 
     tweet_str = tweet.get_tweet() 
     api.update_status(tweet_str)
