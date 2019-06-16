@@ -18,4 +18,3 @@ try:
     
 except (Exception, tweepy.TweepError): 
     print("An Error was found.")
-
