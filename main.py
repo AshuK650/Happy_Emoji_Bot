@@ -8,22 +8,14 @@ api = tweepy.API(auth)
 
 count = 0 
 
-while True: 
-    try: 
-        tweet_str = tweet.get_tweet() 
-        api.update_status(tweet_str)
-        
-        print(tweet_str) 
-        print(len(tweet_str))
-        
-        count += 1 
-        break
-        
-    except (Exception, tweepy.TweepError): 
-        print("An Error was found.")
-        count += 1 
+try: 
+    tweet_str = tweet.get_tweet() 
+    api.update_status(tweet_str)
+    
+    print(tweet_str) 
+    print(len(tweet_str))
+    print("Tweet Complete")
+    
+except (Exception, tweepy.TweepError): 
+    print("An Error was found.")
 
-if count == 1: 
-    print("Execution Complete: {} attempt were made.".format(count))
-else: 
-    print("Execution Complete: {} attempts were made.".format(count))
