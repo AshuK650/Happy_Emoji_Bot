@@ -14,7 +14,7 @@ try:
     
     print(tweet_str) 
     print(len(tweet_str))
-    print("Tweet Complete")
+    print("Tweet Complete.\n")
     
 except (Exception, tweepy.TweepError): 
-    print("An Error was found.")
+    print("An Error was found.\n")
