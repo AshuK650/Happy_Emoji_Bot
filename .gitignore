@@ -114,3 +114,4 @@ dmypy.json
 .pyre/
 credentials.txt
 .DS_Store
+README.md
