@@ -10,8 +10,6 @@ try:
     tweet_str = tweet.get_tweet() 
     api.update_status(tweet_str)
     
-    print(tweet_str) 
-    print(len(tweet_str)) 
-    print("Execution Complete")
-except (Exception, tweepy.TweepError): 
-    print("Just wait until tomorrow.")
+    print("Execution Complete: No Errors")
+except (Exception, tweepy.TweepError) as e: 
+    print("Here's the problem: {}".format(e))
