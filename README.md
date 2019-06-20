@@ -40,13 +40,15 @@ This bot is set up to tweet at 12 PM every day. This bot will hopefully soon be 
 
 ## 💭 How it works<a name = "working"></a>
 
-This bot first creates a string using a template that will create a smiley face using a dictionary of every emoji with the name and the unicodes for it in the file unicode_codes.py which will be converted into a list to allow randomization of selection. 
+This bot first creates a string using a template that will create a smiley face using a dictionary of every emoji with the name and the unicodes for it in the file [unicode_codes.py](https://github.com/AshuK650/Random_Happy_Face/blob/master/unicode_codes.py) which will be converted into a list to allow randomization of selection. 
 
-If the tweet string longer than 280 characters, which is the character limit of Twitter, it will loop recursively until it will get a tweet that is less than 280 characters. 
+The Tweet will be made into a string in the file [tweet.py](https://github.com/AshuK650/Random_Happy_Face/blob/master/tweet.py). This file has a function that is dedicated to getting the randomly selected emojis from [unicode_codes.py](https://github.com/AshuK650/Random_Happy_Face/blob/master/unicode_codes.py). After getting the names and the unicodes of the two emojis, it will then use Python's replace string methods to place the emojis and names into the template. 
 
-The bot will then use Tweepy API (A Twitter API for Python) to send the tweet using one of its methods. 
+To get the login credentials as found in [credentials.py](https://github.com/AshuK650/Random_Happy_Face/blob/master/credentials.py), it will read a text file set up in the format as [credentials_example.txt](https://github.com/AshuK650/Random_Happy_Face/blob/master/credentials_example.txt) but should be ranamed to credentials.txt to avoid an error in [credentials.py](https://github.com/AshuK650/Random_Happy_Face/blob/master/credentials.py)
 
-The entire bot is written in Python 3.7
+Those three files will then all congregate into the main file [main.py](https://github.com/AshuK650/Random_Happy_Face/blob/master/main.py) where it will use Tweepy where it will get the credentials and use them to authenticate the bot as a user and then send the tweet using Tweepy. 
+
+The entire bot is written in Python 3.7.1
 
 ## 🎈 Usage <a name = "usage"></a>
 
@@ -73,15 +75,12 @@ python main.py
 **Tweet Example:**
 [Here](https://twitter.com/RandomHappyBot/status/1140366150645235712)
 
-<sup>If there are any issues with a bot, contact me [here](https://twitter.com/AshuKher)</sup>
-<sup>Want to check out other stuff that I made? Check my [GitHub](https://github.com/AshuK650)</sup>
-
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-To make use of the Tweepy Twitter API, you have to install it from the bash console by typing one of the following into your terminal.
+To make use of Tweepy, you have to install it from the bash console by typing one of the following into your terminal.
 
 Easy Install: 
 ```bash
@@ -98,13 +97,12 @@ python setup.py install
 ## 🚀 Deployment <a name = "deployment"></a>
 To deploy my bot, I used a site called [**PythonAnywhere**](https://pythonanywhere.com) to host my code to run 24/7. In PythonAnywhere, I made use of the **Tasks** tabs to run my code once a day at 16:00 UTC (12 PM EST) everyday. 
 
-In order for PythonAnywhere to be able to use the Tweepy Twitter API, you must instal it by creating a console and using one of the methods found in [Getting Started](#getting_started).
+In order for PythonAnywhere to be able to use Tweepy, you must instal it by creating a console and using one of the methods found in [Getting Started](#getting_started).
 
 In the Tasks tab, when asked for bash command line to execute at your desired time, I put the following 
 ``` bash
 python main.py
 ```
-
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 + [Spyder](https://www.spyder-ide.org/) - Python IDE 
@@ -116,3 +114,8 @@ python main.py
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 + [This article was very helpful and has source code too.](https://dev.to/emcain/how-to-set-up-a-twitter-bot-with-python-and-heroku-1n39)
++ [Tweepy Documentation](http://docs.tweepy.org/en/latest/index.html) 
++ [Python 3.7.1 Documentation](https://docs.python.org/3/)
+
+<sup>If there are any issues with a bot, contact me [here](https://twitter.com/AshuKher)</sup>
+<sup>Want to check out other stuff that I made? Check my [GitHub](https://github.com/AshuK650)</sup>
