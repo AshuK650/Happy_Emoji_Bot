@@ -9,8 +9,8 @@
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
   [![Platform](https://img.shields.io/badge/platform-twitter-1DA1F2.svg)](https://www.twitter.com/RandomHappyBot)
-  [![GitHub Issues](https://img.shields.io/github/issues/AshuK650/Random_Happy_Face.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/AshuK650/Random_Happy_Face.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
+  [![GitHub Issues](https://img.shields.io/github/issues/AshuK650/Random_Happy_Face.svg)](https://github.com/AshuK650/Random_Happy_Face/issues)
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/AshuK650/Random_Happy_Face.svg)](https://github.com/AshuK650/Random_Happy_Face/pulls)
  ![Last Commit](https://img.shields.io/github/last-commit/AshuK650/Random_Happy_Face.svg)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
