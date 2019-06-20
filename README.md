@@ -124,4 +124,4 @@ python main.py
 ---
 <sup>If there are any issues with the bot, contact me [here](https://twitter.com/AshuKher)</sup>
 
-<sup>Want to check out other stuff that I made? Check my [GitHub](https://github.com/AshuK650)</sup>
+<sup>Want to check out other stuff that I made? Check out my [GitHub](https://github.com/AshuK650)</sup>
