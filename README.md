@@ -121,7 +121,6 @@ python main.py
 + [This article was very helpful and has source code too.](https://dev.to/emcain/how-to-set-up-a-twitter-bot-with-python-and-heroku-1n39)
 + [Tweepy Documentation](http://docs.tweepy.org/en/latest/index.html) 
 + [Python 3.7.1 Documentation](https://docs.python.org/3/)
-
+---
 <sup>If there are any issues with a bot, contact me [here](https://twitter.com/AshuKher)</sup>
-
 <sup>Want to check out other stuff that I made? Check my [GitHub](https://github.com/AshuK650)</sup>
