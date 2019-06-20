@@ -36,7 +36,7 @@
 The purpose of this bot is rather simple as to entertain your Twitter feed by sending out a simple smiley face made of emojis that will contain two randomly selected emojis that will be used for the eyes and mouth. 
 
 This bot is set up to tweet at 12 PM every day. This bot will hopefully soon be developed to allow for this bot to be able to tweet multiple times of the day at random times of the day. 
-![Robot Gif](https://i.gifer.com/B4IU.gif)
+![Robot Gif](https://media.giphy.com/media/Tugu78Y5vg0Ss/giphy.gif)
 
 ## 💭 How it works<a name = "working"></a>
 
